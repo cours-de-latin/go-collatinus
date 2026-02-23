@@ -160,7 +160,11 @@ func handleLemmatizeWord(lem *collatinus.Lemmatizer) http.HandlerFunc {
 		sentenceStart, _ := strconv.ParseBool(r.URL.Query().Get("sentence_start"))
 
 		analyses := lem.LemmatizeWord(form, sentenceStart)
-		writeJSON(w, http.StatusOK, lemmatizeWordResponse{
+		status := http.StatusOK
+		if len(analyses) == 0 {
+			status = http.StatusNotFound
+		}
+		writeJSON(w, status, lemmatizeWordResponse{
 			Form:     form,
 			Analyses: toAnalysesJSON(analyses),
 		})
