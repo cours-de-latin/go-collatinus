@@ -1,6 +1,6 @@
 !               lemmes.fr
 Français
-! Version 1 : 2017/04/04
+! Version 2 : 2022/02/02
 !This file is part of COLLATINUS and PRAELECTOR
 !COLLATINUS and PRAELECTOR are free software; you can
 !redistribute it and/or modify it under the terms of
@@ -16,7 +16,7 @@ Français
 !You should have received a copy of the GNU General Public License
 !along with COLLATINUS; if not, write to the Free Software
 !Foundation, Inc., 59 Temple Place, Suite 3inv, Boston, MA  02111-1307  USA
-!© Yves Ouvrard, 2011 - 2017
+!© Yves Ouvrard, 2011 - 2022
 !
 a3:Ah (interjection, exprime la douleur, la joie, l'étonnement, la colère)
 abactus2:détournement (des troupeaux), enlèvement (du butin)
@@ -55,7 +55,7 @@ abitus:départ
 abjecte:lâchement, bassement
 abjectio:rejet, abandon, abattement, découragement
 abjectus:banal, plat, bas, humble, commun, abattu
-abjicio:jeter, rejeter
+!abjicio:jeter, rejeter
 abjudico:refuser (par un jugement, enlever par un jugement), rejeter, repousser
 abjungo:dételer, [fig.] séparer
 abjuro:faire un faux serment; nier une dette par serment
@@ -418,7 +418,7 @@ adhortor:exhorter, inciter, encourager
 adhuc:jusqu'ici, encore maintenant
 Adiabeni:habitants de l'Adiabène
 Adiabenus:de l'Adiabène
-adicio:ajouter
+adicio:jeter vers, ajouter à
 adigo:pousser en avant, enfoncer ; contraindre, forcer à, faire prêter serment
 Adimantus:Adimante (nom de divers personnages)
 adimo:retirer, enlever, ôter, ravir
@@ -430,7 +430,7 @@ aditus:accès
 adjaceo:jouxter, être auprès
 adjectio:action d'ajouter
 adjectus2:mise en contact
-adjicio:jeter vers, ajouter à
+!adjicio:jeter vers, ajouter à
 adjudico:adjuger, attribuer, juger
 adjumentum:aide, secours, assistance
 adjunctio:action de joindre, inclination (de l'âme), sympathie
@@ -1395,11 +1395,11 @@ Androgeoneus:d'Androgée
 Androgeus:Androgée (fils de Minos) aussi Androgeos, o
 androgynes:androgyne
 Andromache:Andromaque
-Andromeda:Andromède
+!Andromeda:Andromède
 Andromede:Andromède
 Andron2:Andron (médecin grec).
 andron:appartement des hommes, passage entre deux murs
-Andronicus:Livius Andronicus (poète latin, grammairien de Syrie, nom d'un ami de Cicéron); nom d'un personnage biblique
+Andronicus:Livius Andronicus (poète latin); grammairien de Syrie; nom d'un ami de Cicéron; nom d'un personnage biblique
 Andros:île d'Andros [une des Cyclades, île entre la Bretagne et l'Irlande]
 Androsthenes:Androsthène [nom d'h.]
 anellus:petit anneau
@@ -2153,6 +2153,7 @@ astrologus:astronome, astrologue
 astronomia:astronomie
 astrum:astre, étoile
 astruo:bâtir à côté; ajouter; prouver, garantir
+Asturco:cheval d’Asturie, haquenée
 Asturicus:d Asturie
 astus:ruse, fourberie
 astute:avec ruse, astucieusement, adroitement
@@ -2541,8 +2542,8 @@ balineum:bain
 baliscus:bain
 balista2:baliste [machine à lancer des projectiles], trait lancé par la baliste
 balitans:qui bêle souvent
-ballaena:baleine
-ballaenaceus:de baleine
+balaena:baleine (cétacé)
+balaenaceus:de baleine
 Ballio:un vaurien
 ballista:balliste
 balneae:bains, thermes
@@ -3189,7 +3190,7 @@ Callirhoe:Callirhoé [fille d'Achéloüs, fontaine près d'Athènes, fontaine d'
 callisco:s'endurcir
 callis:sentier
 Callisthenes:Callisthène [philosophe grec]
-Cāllīstō:Callisto (fille de Lycaon changée en ourse par Junon)
+Callisto:Callisto (fille de Lycaon changée en ourse par Junon)
 Callistratus:Callistratus
 Callistus:Callistus (nom d'homme)
 callosus:calleux, dur, épais
@@ -3211,13 +3212,13 @@ calumnior:accuser à tort
 Calusidius:Calusidius (nom d'homme)
 calva:crâne, [noix à la coquille lisse]
 calvaria:crâne
-Calventius:Caluentius (nom de famille romain)
-Calvina:Caluina (nom de femme)
-Calvinus:Caluinus (surnom des Domitius, Véturius, etc.)
-Calvisius:Caluisius (nom de famille romain)
+Calventius:Calventius (nom de famille romain)
+Calvina:Calvina (nom de femme)
+Calvinus:Calvinus (surnom des Domitius, Véturius, etc.)
+Calvisius:Calvisius (nom de famille romain)
 calvities:calvitie
 calvor:être trompé
-Calvus2:Caluus (surnom, en part. des Licinius)
+Calvus2:Calvus (surnom, en part. des Licinius)
 calvus:chauve
 calx:talon ; pierre à chaux, caillou
 Calybe:Calybe (nom de femme)
@@ -3401,6 +3402,7 @@ capto:chercher à saisir, tâcher d'avoir ; chercher à prendre, être à l'aff�
 captus3:capacité [phys. ou mor.], action de prendre, prise, acquisition
 Capua:Capoue
 capularis:qui a rapport avec le cercueil
+capulator:celui qui transvase le vin ou l’huile, tonnelier
 capulus:cercueil, manche, poignée (d'une épée)
 caput:tête ; l'extrémité ; personne ; vie, existence ; capitale
 Capys:Capys (un des compagnons d'Enée)
@@ -3409,7 +3411,7 @@ Caralitani:Caralitains (les habitants de Caralis)
 Caranus:Caranus (premier roi de Macédoine)
 Caratacus:Caratacus (roi des Silures)
 carbaseus:de lin fin, de toile très fine
-carbasus:carbasa, orum)
+carbasus: espèce de lin très fin, voile tendu dans les théâtres (pluriel carbasa, orum)
 Carbo2:Carbon (surnom des Papirius)
 carbo:charbon
 carbonarius2:charbonnier
@@ -3675,7 +3677,7 @@ Cecropis:descendante de Cécrops, d'Athènes
 Cecropius:de Cécrops
 Cecrops:Cécrops, [premier roi d'Athènes]
 cedo:aller, marcher ; s'en aller, se retirer ; aller, arriver ; céder, concéder
-cedo2:[sing.] donne, montre, indique; [plur.] allons, voyons
+cedo2:[sing. cĕdŏ] donne, montre, indique; [plur. cēttĕ] allons, voyons
 cedrus:cèdre,  bois de cèdre, huile de cèdre
 Celadus:Celadus (rivière de la Tarraconnaise)
 Celaenae:Celaenae (ville de Phrygie)
@@ -4044,7 +4046,7 @@ Circensis:du cirque
 circinus:compas[fig.] sorte d'herpès [maladie]
 circiter:environ
 circito:faire tourner autour, agiter
-circueo:entourer, faire le tour de
+!circueo:entourer, faire le tour de
 circuitus:circuit, tour
 circulator:charlatan, badaud
 circulor:former groupe, faire le colporteur
@@ -4105,9 +4107,9 @@ circumscriptor:faussaire, escroc
 circumscriptus:circonscrit, délimité
 circumseco:couper autour, [en parl. de la circoncision]
 circumsecus:tout autour
-circumsedeo:être assis autour, entourer
+circumsedeo:être assis autour ; entourer ; assiéger, bloquer
 circumsessio:siège, investissement
-circumsideo:être assis autour
+!circumsideo:être assis autour
 circumsido:établir un blocus autour de
 circumsilio:sautiller autour
 circumsisto:entourer
@@ -4971,7 +4973,7 @@ conjecto:conjecturer
 conjector2:interprète, devin
 conjectura:conjecture
 conjectus:l'action de jeter ensemble, de lancer, de jeter les regards sur
-conjicio:jeter, faire entrer dans
+!conjicio:jeter, faire entrer dans
 conjuga:épouse
 conjugalis:du mariage
 conjugator:celui qui unit
@@ -5274,7 +5276,7 @@ convecto:charrier, transporter [en masse, en bloc]
 convector:compagnon de route
 conveho:charrier, apporter, rentrer [la récolte]
 convello:arracher complètement
-convena:étrangers, fugitifs
+convena:(adj.) qui se rencontre, qui se réunit (subst. pl. convenae, arum) étrangers, fugitifs
 conveniens:convenable, bienséant
 convenienter:conformément
 convenientia:accord parfait, harmonie, sympathie
@@ -5922,7 +5924,7 @@ Daedalus:Dédale
 Dahae:les Dahes (peuple scythe)
 Dalmatae:Dalmates
 Dalmatia:Dalmatie
-Dalmaticus:de Dalmatie
+Dalmaticus:de Dalmatie, Dalmatien, [surnom de L. Metellus]
 Dama2:Dama (nom d'esclave)
 Damalis:Damalis (nom de femme)
 Damascus:de Damas
@@ -5958,7 +5960,7 @@ Dardania:Dardanie, troie
 Dardani:Dardaniens
 Dardanides:descendant de Dardanus, Troyen
 Dardanis:Dardanis (Troyenne)
-Dardanius:dardanien, troyen
+!Dardanius:dardanien, troyen
 Dardanus2:Dardanus (fondateur de Troie, magicien, philosophe stoïcien)
 Dardanus:dardanien (Troyen)
 Dares:Dares (nom d'un athlète troyen)
@@ -6074,7 +6076,7 @@ decumanus2:fermier, percepteur de la dîme
 decumanus:sujet à la dîme ; appartenant à la dixième légion (porta decumana : la porte décumane)
 decumates:decumates (champs soumis à la dîme, région entre Rhin et Danube])
 decumbo:tomber
-decumus:dixième
+!decumus:dixième
 decuria:réunion de dix, corporation, décurie
 decuriatio:division par décuries
 decurio2:distribuer par décuries
@@ -6238,7 +6240,7 @@ delitesco:se tenir caché, se cacher
 delitigo:gourmander, s'emporter
 Delium:Delium (ville de Béotie)
 Delius:de Délos
-Delmaticus:Dalmatien, [surnom de L. Metellus]
+!Delmaticus:Dalmatien, [surnom de L. Metellus]
 Delos:Délos [île de la mer Égée]
 Delphicus:delphique
 Delphi:Delphes
@@ -6734,7 +6736,7 @@ diota:amphore (à deux anses)
 Dioxippus:Dioxippe (athlète de la suite d'Alexandre)
 Diphilus:Diphile [poète comique d'Athènes, autres du même nom]
 diploma:pièce officielle (lettres de grâce, sauf-conduit, permis officiel)
-dipundius:somme de deux as
+!dipundius:somme de deux as
 dirae2:mauvais présages, exécrations, imprécations
 Dirae:les Furies
 dira:présages funestes
@@ -6864,7 +6866,7 @@ dissero3:disséminer
 dissero:exposer, disserter, raisonner
 disserpo:se répandre [insensiblement]
 disserto:discuter, disserter sur, exposer, traiter [en paroles]
-dissicio:jeter çà et là, disperser, reverser, rompre
+!dissicio:jeter çà et là, disperser, reverser, rompre
 dissico:disperser
 dissideo:ne pas s'entendre, être en opposition
 dissignator:ordonnateur, celui qui assigne les places au théâtre
@@ -6945,6 +6947,8 @@ diverto:se détourner de, se séparer de, s'en aller, [en part.] divorcer, être
 dives:riche
 divexo:ravager, saccager, persécuter, tourmenter
 Diviciacus:Diviciacus
+Divico:Divicon (général des Helvètes, ambassadeur de César)
+dividia:discorde; ennui, souci, inquiétude
 divido:diviser
 dividuus:divisible, divisé, séparé, partagé, [t. de gram.] partitif
 divina:devineresse
@@ -7202,7 +7206,7 @@ Eburones:les Eburons
 Eburovices:Eburovices (peuple de la Gaule)
 ecastor:par Castor
 Ecbatana:Ecbatane [capitale de la Médie]
-ecbibo:boire
+!ecbibo:boire
 eccere:voilà, c'est cela
 ecce:voici, voici que
 ecclesia:assemblée [du peuple, des chrétiens];  l'Église, église (édifice)
@@ -7674,7 +7678,7 @@ ergastulum:ergastule (atelier d'esclaves ou bâtiment où on les enfermait; on y
 Ergenna:Ergenna (nom d'un aruspice)
 ergo:donc
 erice:bruyère [en arbre, grande espèce de bruyère]
-Erichto:Erichto (magicienne thessalienne)
+Erichtho:Erichtho (magicienne thessalienne)
 Erichthonius2:Érichthon (roi d'Athènes, roi des Troyens)
 ericius:hérisson, [milit.] chevaux de frise
 Eridanus:Éridan (le Pô)
@@ -8235,7 +8239,7 @@ extrico:débarrasser, démêler, défricher, débrouiller, déchiffrer, chasser
 extrilidus:très pâle
 extrinsecus:du dehors, de l'extérieur
 extrudo:pousser dehors avec violence, chasser de, mettre à la porte
-extruo:accumuler, construire, élever
+!extruo:accumuler, construire, élever
 extundo:faire sortir, obtenir avec effort
 exturbo:faire sortir de force, chasser, expulser
 exubero:regorger, déborder, abonder, rendre abondant, dépasser [en nombre]
@@ -9175,6 +9179,7 @@ Ganges:le Gange [fleuve de l'Inde]
 Gangeticus:du Gange
 Gangetis:du Gange
 gannio:japper, crier, grogner, criailler
+gannitus:jappement, gémissement des petits chiens; gazouillement [des oiseaux]
 Garamantes:Garamantes (peuple africain, au S. de la Numidie)
 Garamantis:du pays des Garamantes
 Garamas:Garamas (fils d'Apollon, héros éponyme des Garamantes)
@@ -9618,7 +9623,7 @@ Halaesus:Halaesus (fils d'Agamemnon, un des Lapithes, montagne et rivière de Si
 halcyoneus:des alcyons
 Haliacmon:Haliacmon (fleuve de Macédoine)
 Halicarnassus:Halicarnasse (capitale de la Carie)
-Halicarnasus:Halicarnasse (ville de Carie).
+!Halicarnasus:Halicarnasse (ville de Carie).
 Halicyenses:habitants d'Halicyes
 Halicyensis:d'Halicyes
 halitus:souffle, exhalaison, vapeur, émanation, haleine, souffle, respiration, âme
@@ -11038,7 +11043,7 @@ inhumaniter:incivilement, sans politesse
 inhumanus:inhumain, barbare, cruel
 inhumatus:sans sépulture
 inibi:là, en ce lieu-là, à l'instant
-inicio:jeter sur
+!inicio:jeter sur
 inimice:en ennemi
 inimicitia:haine, inimitié
 inimico:rendre ennemi
@@ -11085,12 +11090,17 @@ innatus:naturel, inné
 innecto:enlacer, tresser, ourdir
 innitor:s'appuyer sur
 innocens:innocent, vertueux, inoffensif
+innocenter:sans dommage ; sans faire de mal, honnêtement, de manière irréprochable
 innocentia:innocuité; les moeurs irréprochables, intégrité, innocence
+innocue:sans faire de mal; d’une manière irréprochable
 innocuus:inoffensif, innocent
 inno:nager (dans)
 innotesco:se faire connaître (par qqch, aliqua re), devenir clair
 innovo:renouveler
+innoxie:sans faire de mal; vertueusement
 innoxius:qui ne fait pas de mal, inoffensif, innocent
+innubilus:sans nuages, serein
+innubis:sans nuages, serein
 innubus:non marié
 innumerabilis:innombrable
 innumerabiliter:en nombre infini
@@ -11399,7 +11409,7 @@ interitio:destruction, anéantissement
 interitus:mort
 interius:plus en dedans, intérieurement
 interjaceo:être placé entre
-interjacio:être placé entre
+!interjacio:être placé entre
 interjectus2:interposition, intervalle de temps
 interjungo:joindre, unir, dételer
 interlino:mélanger, relier par un enduit, falsifier [par des ratures]
@@ -11780,7 +11790,7 @@ jejune:sèchement, maigrement, sans développement
 jejuniosus:à jeun, affamé
 jejunium:jeûne, faim
 jejunus:à jeun, altéré, sec ; [en parl. du sol] maigre, pauvre
-jentaculum:déjeuner, petit déjeuner
+!jentaculum:déjeuner, petit déjeuner
 Jesus:Jésus
 joca:plaisanterie
 jocatio:badinage, plaisanterie
@@ -11925,7 +11935,7 @@ Labicanus:de Labicum (entre Tusculum et Préneste)
 Labici:les habitants de Lacinum
 Labienianus:de Labienus
 Labienus:Labienus
-labo:chanceler, vaciller, glisser, couler
+labo:chanceler, vaciller ; [fig.] menacer ruine, être ébranlé
 labor2:peine, souffrance, travail pénible
 laboriose:avec peine, laborieusement
 laboriosus:qui demande du travail, qui se donne au travail, actif, laborieux
@@ -12480,8 +12490,8 @@ licentia:liberté, pouvoir, licence
 licentiosus:libre, déréglé, licencieux
 liceo:être en vente, mettre en vente (rare)
 liceor:offrir un prix, se porter acquéreur, apprécier, évaluer
-licet2:bien que, encore que
 licet:il est permis
+!licet2:bien que, encore que
 Lichas:Lichas (esclave d'Hercule)
 Licinia:Licinia (nom de femme)
 Licinianus2:Licinianus (nom d'homme)
@@ -14346,8 +14356,8 @@ neglectus:négligé, abandonné
 neglegens:distrait, peu attentif, négligent
 neglegenter:avec négligence, sans soin
 neglegentia:négligence
-neglego:négliger
-negligo:ne pas se soucier de, négliger, dédaigner, omettre
+neglego:négliger, ne pas se soucier de, dédaigner, omettre
+!negligo:ne pas se soucier de, négliger, dédaigner, omettre
 nego:nier
 negotiatio:négoce, commerce, entreprise [commerciale], trafic
 negotiator:négociant, marchand, trafiquant
@@ -14747,8 +14757,8 @@ Nyctelius:de Nyctelius (Bacchus)
 Nycteus:Nycteus (fils de Neptune et père d'Antiope)
 Nyctimene:Nyctimene (fille d'Épope, changée en chouette)
 Nymphaeum:Nymphaeum (cap et port d'Illyrie)
-nympha:nymphe
-nymphe:nymphe (forme grecque)
+!nympha:nymphe
+nymphe:nymphe
 Nymphidius:Nymphidius (préfet du prétoire sous Néron)
 Nymphius:Nymphius (nom d'homme)
 Nymphodorus:Nymphodorus (nom d'homme)
@@ -14778,7 +14788,7 @@ oberro:errer devant ou autour (+ D.)
 obesus:rongé, maigre; obèse, gras, replet, épais, grossier
 obex:barre, verrou, barrière, obstacle
 obhaeresco:s'attacher à
-obicio:jeter devant, placer devant
+obicio:jeter devant, placer devant, exposer, reprocher
 obirascor:s'irriter contre, s'irriter
 obiter:chemin faisant, en passant, en passant, sans insister, à l'instant, aussitôt, tout de suite
 obitus:mort
@@ -14788,7 +14798,7 @@ objecta:charges, accusations
 objectatio:reproche, accusation
 objecto:opposer; exposer [à un danger], interposer, retarder; reprocher
 objectus2:action de mettre devant, opposition, obstacle, barrière, spectacle
-objicio:jeter devant, exposer, reprocher
+!objicio:jeter devant, exposer, reprocher
 objurgatio:reproches, réprimande, blâme
 objurgator:celui qui fait des reproches
 objurgatorius:de reproche, de blâme
@@ -16455,6 +16465,7 @@ persuastrix:celle qui persuade
 persuasus2:instigation
 persubtilis:très subtil, très ingénieux
 persulto:sauter, bondir; se promener à son aise
+pertaedesco:se dégoûter
 pertaesus:dégoûté, las de (me pertaesum est : je fus dégoûté +gén.)
 pertendo:achever, se diriger vers, persister, s'efforcer avec opiniâtreté
 pertenuis:très léger, très fragile
@@ -18089,7 +18100,7 @@ prudenter:avec sagacité, avec prudence, avec clairvoyance
 prudentia:prévoyance, prévision
 pruina:gelée blanche, neige
 pruinosus:couvert de givre, glacé, glacial
-pruna:prune
+pruna:charbon ardent, braise
 prunum:prune, prunelle
 prunus:prunier
 prurigo:démangeaison
@@ -18519,12 +18530,12 @@ quinquiens:cinq fois
 quinquies:cinq fois
 quinquiplico:quintupler
 quintadecimani:soldats de la quinzième légion
-quintadecumanus:soldat de la quinzième légion
+!quintadecumanus:soldat de la quinzième légion
 quintana:marché
 quintani:soldats de la 5e légion
 quintanus:soldat de la cinquième légion
 Quinta:Quinta (prénom de femme)
-Quintianus:de Quintius
+!Quintianus:de Quintius
 Quintilianus2:Quintilien (rhéteur)
 Quintilia:Quintilia (nom de femme)
 Quintilius:Quintilius
@@ -20478,7 +20489,7 @@ siparum:petite voile de perroquet
 Siphnus:Siphnus (une Cyclade)
 sipho:pompe à incendie, petit tube, jet [d'un liquide]
 Sipontinus:de Siponte
-sipunculus:petit tuyau
+siphunculus:petit tuyau
 Sipylus:mont Sipyle (en Lydie)
 siquidem:si vraiment, puisque
 siqui:= si qui
@@ -21005,7 +21016,7 @@ Stratonicis:Stratonicis (surnom de Vénus à Smyrne)
 Stratonicus:Stratonicus (célèbre musicien contemporain d'Alexandre le Grand, il fasait des tournées à travers toute la Grèce)
 Strato:Strato (philosophe; esclave médecin)
 stratum:couverture de lit, lit, selle, bât, pavage
-Stratus2:Stratus (ville d'Acarnanie; rivière d'Hyrcanie)
+Stratos:Stratus (ville d'Acarnanie; rivière d'Hyrcanie)
 strenue:hardiment
 strenuus:actif, agissant, vif, empressé
 strepito:faire grand bruit, retentir
@@ -21118,7 +21129,7 @@ subeundus:qu'il faut fléchir, qu'il faut gagner
 suber:chêne-liège, bouchon de liège
 subflavus:un peu blond
 subhorridus:un peu hirsute
-subicio:placer sous
+subicio:jeter sous, mettre sous, placer sous, soumettre, assujettir
 subigitatio:caresse lascive
 subigito:caresser
 subigo:pousser vers le haut, de force, contraindre
@@ -21135,7 +21146,7 @@ subjector:fabricateur de testaments
 subjectum:sujet
 subjectus2:inférieur, sujet.
 subjectus:voisin, proche, limitrophe, lieux bas, fonds, vallées, soumis, assujetti
-subjicio:jeter sous, mettre sous, placer sous, soumettre, assujettir
+!subjicio:jeter sous, mettre sous, placer sous, soumettre, assujettir
 subjugius:qui sert à attacher le joug
 subjungo:assujettir
 sublabor:glisser par-dessous, s'affaisser ; se glisser dans, s'insinuer
@@ -22132,7 +22143,7 @@ Thyrsis:Thyrsis (nom de berger, nom d'homme)
 thyrsus:thyrse
 Thysdra:Thysdra (ville de la Byzacène)
 Thysdritanus:de Thysdrus (ville de la Byzacène)
-tiaras:tiare (coiffure des Orientaux)
+tiara:tiare (coiffure des Orientaux)
 Tiberianus:de Tibère
 Tiberinis:du Tibre
 Tiberinus2:du Tibre, le port d'Ostie
@@ -22359,11 +22370,11 @@ tragula:tragule (javelot muni d'une courroie), herse, filet
 tragus:odeur des aisselles, sorte de poisson
 trahea:herse
 traho:tirer ; solliciter, attirer ; traîner ; extraire ; allonger, prolonger ; différer, retarder
-traicio:traverser
+traicio:lancer au-delà, faire passer, faire traverser; traverser
 Trajanus2:de Trajan
 Trajanus:Trajan
 trajectus2:traversée, lieu d'embarquement
-trajicio:faire traverser
+!trajicio:faire traverser
 tralaticius:traditionnel, consacré, ordinaire, commun, métaphorique
 tralatus:transport, exhibition
 Tralliani:habitants de Tralles
@@ -22406,12 +22417,12 @@ transfusio:transvasement, apport [étranger], mélange [de peuplades], transfert
 transgredior:passer de l'autre côté, traverser, franchir
 transgressio:passage [de l'autre côté], hyperbate, transition, infraction
 transgressus2:action de franchir, traversée
-transicio:jeter, placer au-delà, lancer au-delà, transporter au-delà, traverser
+!transicio:jeter, placer au-delà, lancer au-delà, transporter au-delà, traverser
 transigo:pousser à travers ou jusqu'au bout ; régler, trancher, arranger
 transilio:traverser, sauter au-dessus de
 transitio:passage, défection, contagion, transition, flexion (dans les décl. et conjug.)
 transitus:passage, traversée
-transjicio:lancer au-delà, faire passer, faire traverser, traverser, transpercer
+!transjicio:lancer au-delà, faire passer, faire traverser, traverser, transpercer
 translaticius:traditionnel, consacré, ordinaire, commun, métaphorique
 translatio:transplantation; l'action de rejeter sur un autre; la traduction
 translator:traducteur, copiste
@@ -22455,7 +22466,7 @@ trapetes:meule de pressoir à olives, pressoir
 trapetum:meule de pressoir à olives, pressoir
 trapetus:meule de pressoir à olives, pressoir
 Trapezus:Trapézonte (ville du Pont)
-Trasumennus:le Trasimène (lac)
+Trasumenus:le Trasimène (lac)
 Traulus:Traulus (nom d'homme)
 Trausius:Trausius (nom d'homme)
 traversarius:placé en travers, transversal
@@ -23424,7 +23435,7 @@ veru:broche
 Verulamium:Verulamium (municipe de Bretagne)
 Verulana:Verulana (nom de femme)
 Verulanus2:Verulanus (nom d'homme)
-verumtamen:séparé de
+verumtamen:mais pourtant, mais cependant
 verum:vraiment, en vérité, mais
 Verus2:Verus2 (nom d'h.)
 verus:vrai
