@@ -1,0 +1,94 @@
+---
+kind: pipeline
+type: docker
+name: build-arm64
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: backend
+  image: golang:1-alpine
+  commands:
+  - go vet -buildvcs=false ./...
+  - go test ./...
+  - go build -tags netgo -ldflags '-w -X main.Version=${DRONE_BRANCH}-${DRONE_COMMIT} -X main.build=${DRONE_BUILD_NUMBER}' -buildvcs=false ./cmd/server
+  environment:
+    CGO_ENABLED: 0
+
+- name: publish
+  image: plugins/docker
+  settings:
+    registry: registry.nemunai.re
+    repo: registry.nemunai.re/magister/collatinus
+    auto_tag: true
+    auto_tag_suffix: ${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
+trigger:
+  event:
+  - cron
+  - push
+  - tag
+
+---
+kind: pipeline
+type: docker
+name: build-amd64
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: publish
+  image: plugins/docker
+  settings:
+    registry: registry.nemunai.re
+    repo: registry.nemunai.re/magister/collatinus
+    auto_tag: true
+    auto_tag_suffix: ${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
+trigger:
+  event:
+  - cron
+  - push
+  - tag
+
+---
+kind: pipeline
+name: docker-manifest
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: publish
+  image: plugins/manifest
+  settings:
+    auto_tag: true
+    ignore_missing: true
+    spec: .drone-manifest.yml
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
+trigger:
+  event:
+  - cron
+  - push
+  - tag
+
+depends_on:
+- build-arm64
+- build-amd64
