@@ -371,35 +371,39 @@ func (l *Lemmatizer) buildRadicals(lemma *Lemma) {
 			continue
 		}
 
-		// Strip trailing combining breve if present
-		grq := strings.TrimSuffix(lemma.Grq, "\u0306")
+		// Build radicals from the primary Grq and all alternative forms.
+		grqForms := append([]string{lemma.Grq}, lemma.altGrqs...)
+		for _, rawGrq := range grqForms {
+			// Strip trailing combining breve if present
+			grq := strings.TrimSuffix(rawGrq, "\u0306")
 
-		var stemGrq string
-		if rule == "K" {
-			stemGrq = grq
-		} else {
-			// rule = "n,suffix" or just "n"
-			ruleParts := strings.SplitN(rule, ",", 2)
-			oter, _ := strconv.Atoi(ruleParts[0])
-			// Remove oter runes from end
-			runes := []rune(grq)
-			if oter > len(runes) {
-				oter = len(runes)
+			var stemGrq string
+			if rule == "K" {
+				stemGrq = grq
+			} else {
+				// rule = "n,suffix" or just "n"
+				ruleParts := strings.SplitN(rule, ",", 2)
+				oter, _ := strconv.Atoi(ruleParts[0])
+				// Remove oter runes from end
+				runes := []rune(grq)
+				if oter > len(runes) {
+					oter = len(runes)
+				}
+				stemGrq = string(runes[:len(runes)-oter])
+				if len(ruleParts) > 1 && ruleParts[1] != "0" {
+					stemGrq += ruleParts[1]
+				}
 			}
-			stemGrq = string(runes[:len(runes)-oter])
-			if len(ruleParts) > 1 && ruleParts[1] != "0" {
-				stemGrq += ruleParts[1]
-			}
-		}
 
-		r := &Radical{
-			Grq:   Communes(stemGrq),
-			Gr:    Atone(stemGrq),
-			Num:   rn,
-			Lemma: lemma,
+			r := &Radical{
+				Grq:   Communes(stemGrq),
+				Gr:    Atone(stemGrq),
+				Num:   rn,
+				Lemma: lemma,
+			}
+			lemma.radicals[rn] = append(lemma.radicals[rn], r)
+			l.addRadical(r)
 		}
-		lemma.radicals[rn] = append(lemma.radicals[rn], r)
-		l.addRadical(r)
 	}
 }
 

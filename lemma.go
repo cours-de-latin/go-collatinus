@@ -58,6 +58,10 @@ type Lemma struct {
 	// renvoi is a cross-reference key (when IndMorph contains "cf. xxx").
 	renvoi string
 
+	// altGrqs holds additional canonical forms with quantity marks (comma-separated
+	// alternatives after the first form in the lemmes.la Grq field).
+	altGrqs []string
+
 	// radicals maps radical-number → list of Radical pointers.
 	radicals map[int][]*Radical
 	// irregs is the list of irregular forms for this lemma.
@@ -92,13 +96,24 @@ func newLemma(line string) *Lemma {
 	rawKey := keyGrq[0]
 
 	l.Key = NormalizeKey(rawKey)
-	l.Grq, l.HomonymNum = oteNh(func() string {
+	rawGrq := func() string {
 		if len(keyGrq) > 1 {
 			return keyGrq[1]
 		}
 		return rawKey
-	}())
+	}()
+	// The Grq field may contain comma-separated alternative canonical forms
+	// (e.g. "tēmpto,tēnto"). Use only the first as the primary Grq and
+	// store the rest in altGrqs for radical building.
+	grqForms := strings.SplitN(rawGrq, ",", -1)
+	l.Grq, l.HomonymNum = oteNh(grqForms[0])
 	l.Gr = Atone(l.Grq)
+	for _, alt := range grqForms[1:] {
+		alt = strings.TrimSpace(alt)
+		if alt != "" {
+			l.altGrqs = append(l.altGrqs, alt)
+		}
+	}
 
 	l.modelName = parts[1]
 
