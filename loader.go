@@ -349,6 +349,27 @@ func (l *Lemmatizer) loadLexicon(dataDir string) error {
 	return sc.Err()
 }
 
+// stemFromGrq computes the stem string from a canonical form (grq) and a radical
+// rule string ("K", "n", or "n,suffix"), mirroring the C++ radical derivation.
+func stemFromGrq(grq, rule string) string {
+	// Strip trailing combining breve if present
+	grq = strings.TrimSuffix(grq, "\u0306")
+	if rule == "K" {
+		return grq
+	}
+	ruleParts := strings.SplitN(rule, ",", 2)
+	oter, _ := strconv.Atoi(ruleParts[0])
+	runes := []rune(grq)
+	if oter > len(runes) {
+		oter = len(runes)
+	}
+	stem := string(runes[:len(runes)-oter])
+	if len(ruleParts) > 1 && ruleParts[1] != "0" {
+		stem += ruleParts[1]
+	}
+	return stem
+}
+
 // buildRadicals computes all radicals for a lemma from its model's radical rules,
 // then registers them in the global radicals map.
 // Mirrors Lemmat::ajRadicaux.
@@ -371,33 +392,14 @@ func (l *Lemmatizer) buildRadicals(lemma *Lemma) {
 			continue
 		}
 
-		// Build radicals from the primary Grq and all alternative forms.
-		grqForms := append([]string{lemma.Grq}, lemma.altGrqs...)
-		for _, rawGrq := range grqForms {
-			// Strip trailing combining breve if present
-			grq := strings.TrimSuffix(rawGrq, "\u0306")
-
-			var stemGrq string
-			if rule == "K" {
-				stemGrq = grq
-			} else {
-				// rule = "n,suffix" or just "n"
-				ruleParts := strings.SplitN(rule, ",", 2)
-				oter, _ := strconv.Atoi(ruleParts[0])
-				// Remove oter runes from end
-				runes := []rune(grq)
-				if oter > len(runes) {
-					oter = len(runes)
-				}
-				stemGrq = string(runes[:len(runes)-oter])
-				if len(ruleParts) > 1 && ruleParts[1] != "0" {
-					stemGrq += ruleParts[1]
-				}
-			}
-
+		// Iterate over the primary form and all alternative canonical forms,
+		// matching the C++ ajRadicaux which calls l->grq().split(',') and
+		// registers each derived radical on both the lemma and the global map.
+		for _, grqForm := range append([]string{lemma.Grq}, lemma.altGrqs...) {
+			stem := stemFromGrq(grqForm, rule)
 			r := &Radical{
-				Grq:   Communes(stemGrq),
-				Gr:    Atone(stemGrq),
+				Grq:   Communes(stem),
+				Gr:    Atone(stem),
 				Num:   rn,
 				Lemma: lemma,
 			}
