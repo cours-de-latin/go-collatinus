@@ -16,8 +16,10 @@ import (
 	"net/http"
 	"sort"
 	"strconv"
+	"strings"
 
 	collatinus "github.com/cours-de-latin/collatinus"
+	"github.com/rs/cors"
 )
 
 // ---- JSON response types ------------------------------------------------
@@ -239,6 +241,7 @@ func handleLanguages(lem *collatinus.Lemmatizer) http.HandlerFunc {
 func main() {
 	dataDir := flag.String("data", "data", "path to Collatinus data directory")
 	addr := flag.String("addr", ":8080", "listen address")
+	corsOrigins := flag.String("cors", "", "comma-separated list of allowed CORS origins (e.g. https://a.com,https://b.com); use * to allow all")
 	flag.Parse()
 
 	log.Printf("loading data from %s …", *dataDir)
@@ -254,8 +257,19 @@ func main() {
 	mux.HandleFunc("/api/inflection", handleInflection(lem))
 	mux.HandleFunc("/api/languages", handleLanguages(lem))
 
+	var handler http.Handler = mux
+	if *corsOrigins != "" {
+		origins := strings.Split(*corsOrigins, ",")
+		handler = cors.New(cors.Options{
+			AllowedOrigins: origins,
+			AllowedMethods: []string{http.MethodGet, http.MethodPost, http.MethodOptions},
+			AllowedHeaders: []string{"Content-Type"},
+		}).Handler(mux)
+		log.Printf("CORS enabled for origins: %v", origins)
+	}
+
 	log.Printf("listening on %s", *addr)
-	if err := http.ListenAndServe(*addr, mux); err != nil {
+	if err := http.ListenAndServe(*addr, handler); err != nil {
 		log.Fatalf("server error: %v", err)
 	}
 }
