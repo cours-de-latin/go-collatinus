@@ -161,6 +161,7 @@ func handleLemmatizeWord(lem *collatinus.Lemmatizer) http.HandlerFunc {
 		}
 		sentenceStart, _ := strconv.ParseBool(r.URL.Query().Get("sentence_start"))
 
+		form = strings.ToLower(form)
 		analyses := lem.LemmatizeWord(form, sentenceStart)
 		status := http.StatusOK
 		if len(analyses) == 0 {
@@ -210,6 +211,7 @@ func handleInflection(lem *collatinus.Lemmatizer) http.HandlerFunc {
 			writeError(w, http.StatusBadRequest, "missing 'lemma' query parameter")
 			return
 		}
+		key = strings.ToLower(key)
 		lemma := lem.Lemma(key)
 		if lemma == nil {
 			writeError(w, http.StatusNotFound, fmt.Sprintf("lemma %q not found", key))
