@@ -33,11 +33,11 @@ func (l *Lemmatizer) loadMorphos(dataDir string) error {
 		if strings.HasPrefix(line, "!") {
 			continue
 		}
-		idx := strings.Index(line, ":")
-		if idx < 0 {
+		_, after, ok := strings.Cut(line, ":")
+		if !ok {
 			continue
 		}
-		l.morphos = append(l.morphos, line[idx+1:])
+		l.morphos = append(l.morphos, after)
 	}
 	return sc.Err()
 }
@@ -148,7 +148,7 @@ func (l *Lemmatizer) parseModel(lines []string) *Model {
 					desStr = desStrs[len(desStrs)-1]
 				}
 				// Each desStr may be comma-separated (multiple desinences for same morpho)
-				for _, g := range strings.Split(desStr, ",") {
+				for g := range strings.SplitSeq(desStr, ",") {
 					grq := g
 					if grq == "-" {
 						grq = ""
@@ -458,12 +458,12 @@ func (l *Lemmatizer) loadTranslationFile(path, lang string) error {
 			l.languages[lang] = lang
 			langNameSet = true
 		}
-		idx := strings.Index(line, ":")
-		if idx < 0 {
+		before, after, ok := strings.Cut(line, ":")
+		if !ok {
 			continue
 		}
-		key := Deramise(line[:idx])
-		translation := line[idx+1:]
+		key := Deramise(before)
+		translation := after
 		if lemma := l.lemmas[key]; lemma != nil {
 			lemma.AddTranslation(lang, translation)
 		}
@@ -536,12 +536,12 @@ func (l *Lemmatizer) loadAssims(dataDir string) error {
 		if line == "" || strings.HasPrefix(line, "!") {
 			continue
 		}
-		idx := strings.Index(line, ":")
-		if idx < 0 {
+		before, after, ok := strings.Cut(line, ":")
+		if !ok {
 			continue
 		}
-		key := Atone(line[:idx])
-		val := Atone(line[idx+1:])
+		key := Atone(before)
+		val := Atone(after)
 		l.assims[key] = val
 	}
 	return sc.Err()
@@ -563,11 +563,11 @@ func (l *Lemmatizer) loadContractions(dataDir string) error {
 		if line == "" || strings.HasPrefix(line, "!") {
 			continue
 		}
-		idx := strings.Index(line, ":")
-		if idx < 0 {
+		before, after, ok := strings.Cut(line, ":")
+		if !ok {
 			continue
 		}
-		l.contractions[line[:idx]] = line[idx+1:]
+		l.contractions[before] = after
 	}
 	return sc.Err()
 }

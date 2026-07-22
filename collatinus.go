@@ -3,6 +3,8 @@
 // without any Qt dependency.
 package collatinus
 
+import "maps"
+
 // Lemmatizer holds all loaded data and provides the public API.
 type Lemmatizer struct {
 	// morphos stores morphological descriptions indexed 1-based.
@@ -102,9 +104,7 @@ func (l *Lemmatizer) LemmaByKey(key string) *Lemma {
 // loaded translation files.
 func (l *Lemmatizer) Languages() map[string]string {
 	out := make(map[string]string, len(l.languages))
-	for k, v := range l.languages {
-		out[k] = v
-	}
+	maps.Copy(out, l.languages)
 	return out
 }
 

@@ -1,6 +1,7 @@
 package collatinus
 
 import (
+	"slices"
 	"strconv"
 	"strings"
 )
@@ -10,7 +11,7 @@ import (
 // Mirrors Modele::listeI in modele.cpp.
 func ListI(s string) []int {
 	var result []int
-	for _, part := range strings.Split(s, ",") {
+	for part := range strings.SplitSeq(s, ",") {
 		part = strings.TrimSpace(part)
 		if idx := strings.Index(part, "-"); idx > 0 {
 			start, _ := strconv.Atoi(part[:idx])
@@ -77,12 +78,7 @@ func (m *Model) hasDesinence(morphoNum int) bool {
 
 // isAbsent returns true if morpho index a is absent in this model.
 func (m *Model) isAbsent(a int) bool {
-	for _, v := range m.Absents {
-		if v == a {
-			return true
-		}
-	}
-	return false
+	return slices.Contains(m.Absents, a)
 }
 
 // DesinencesAt returns all desinences for the given morpho index.

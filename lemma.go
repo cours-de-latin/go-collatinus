@@ -2,6 +2,7 @@ package collatinus
 
 import (
 	"regexp"
+	"slices"
 	"strconv"
 	"strings"
 	"unicode"
@@ -123,7 +124,7 @@ func newLemma(line string) *Lemma {
 			continue
 		}
 		radNum := i - 1 // field 2 → radical 1, field 3 → radical 2
-		for _, radStr := range strings.Split(parts[i], ",") {
+		for radStr := range strings.SplitSeq(parts[i], ",") {
 			if radStr == "" {
 				continue
 			}
@@ -225,22 +226,15 @@ func (l *Lemma) addIrreg(irr *Irreg) {
 
 // isExclusiveIrreg returns true if morpho index nm is covered by an exclusive irregular.
 func (l *Lemma) isExclusiveIrreg(nm int) bool {
-	for _, v := range l.morphosIrregExcl {
-		if v == nm {
-			return true
-		}
-	}
-	return false
+	return slices.Contains(l.morphosIrregExcl, nm)
 }
 
 // irregAt returns the irregular form for morpho index i, and whether it's exclusive.
 // Mirrors Lemme::irreg.
 func (l *Lemma) irregAt(i int) (string, bool) {
 	for _, ir := range l.irregs {
-		for _, m := range ir.Morphos {
-			if m == i {
-				return ir.Grq, ir.Exclusive
-			}
+		if slices.Contains(ir.Morphos, i) {
+			return ir.Grq, ir.Exclusive
 		}
 	}
 	return "", false
